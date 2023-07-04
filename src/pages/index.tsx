@@ -2,6 +2,8 @@ import Head from 'next/head'
 import { Montserrat } from 'next/font/google'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
+import { Footer } from '@/components/Footer'
+import { AboutMusic } from '@/components/About'
 
 const montserrat = Montserrat({ variable: '--montserrat', subsets: ['latin'] })
 
@@ -17,7 +19,9 @@ export default function Home() {
       <Header />
       <main className={`${montserrat.variable} ${montserrat.className}`}>
         <Hero id="home" />
+        <AboutMusic />
       </main>
+      <Footer />
     </>
   )
 }

@@ -12,12 +12,15 @@
   --adicional5: #ffcdcd;
   --adicional6: #ffbe9d;
   --adicional7: #464646;
+  --adicional8: #5c5c5c;
   --generalDark: #222222;
   --generalLight: #f9f9f9;
 
   --generalBlue: #381ddb;
   --generalLightRed: #ffa3a3;
   --generalRed: #f64348;
+
+  --maxContainerWidth: max(calc((100% - 73.125rem) / 2), 1rem);
 }
 
 // @media (max-width: '1440px') {
@@ -33,7 +36,6 @@
 // }
 
 body {
-  // font-family: var(--montserrat);
   color: var(--generalLight);
 }
 

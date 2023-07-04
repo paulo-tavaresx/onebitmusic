@@ -10,10 +10,22 @@
   color: var(--generalLight);
   transition: transform 0.3s ease-in-out;
 
+  svg {
+    path {
+      fill: var(--generalLight);
+    }
+  }
+
   &.lightColor {
     background-color: var(--generalLight);
     color: var(--generalDark);
     border-color: var(--generalDark);
+
+    svg {
+      path {
+        fill: var(--generalDark);
+      }
+    }
   }
   &.redColor {
     background-color: var(--generalRed);
@@ -23,12 +35,20 @@
     background-color: var(--generalLight);
     color: var(--generalRed);
     border-color: var(--generalRed);
+
+    svg {
+      path {
+        fill: var(--generalRed);
+      }
+    }
   }
   &.noborder {
     border-color: transparent;
   }
 
-  &:hover {
-    transform: scale(1.1);
+  @media (min-width: 769px) {
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }
