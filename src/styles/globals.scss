@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --adicional1: #e0e0e0;
+  --adicional2: #db841d;
+  --adicional3: #aa6550;
+  --adicional4: #c00096;
+  --adicional5: #ffcdcd;
+  --adicional6: #ffbe9d;
+  --adicional7: #464646;
+  --generalDark: #222222;
+  --generalLight: #f9f9f9;
+
+  --generalBlue: #381ddb;
+  --generalLightRed: #ffa3a3;
+  --generalRed: #f64348;
+}
+
+// @media (max-width: '1440px') {
+//   html {
+//     font-size: 92.75%;
+//   }
+// }
+
+// @media (max-width: '768px') {
+//   html {
+//     font-size: 85%;
+//   }
+// }
+
+body {
+  // font-family: var(--montserrat);
+  color: var(--generalLight);
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

@@ -1,0 +1,13 @@
+.container {
+  padding: 2rem max(calc((100% - 73.125rem) / 2), 1rem);
+  width: 100%;
+  position: fixed;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @media (min-width: '769px') {
+    align-items: center;
+  }
+}
