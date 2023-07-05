@@ -44,7 +44,7 @@ export const Testimonials = ({}: TestimonialsProps) => {
 
         {testimonialsDataList.map(
           ({ text, avatarSrc, city, name }, index, { length }) => (
-            <div className={styles.testimonial}>
+            <div key={`testimonial-${index}`} className={styles.testimonial}>
               <div
                 className={`${styles.containerText} 
                 ${index === length - 1 && styles.cursorPoint} 
