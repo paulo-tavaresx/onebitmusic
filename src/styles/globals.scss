@@ -23,20 +23,10 @@
   --maxContainerWidth: max(calc((100% - 73.125rem) / 2), 1rem);
 }
 
-// @media (max-width: '1440px') {
-//   html {
-//     font-size: 92.75%;
-//   }
-// }
-
-// @media (max-width: '768px') {
-//   html {
-//     font-size: 85%;
-//   }
-// }
-
-body {
+body,
+section {
   color: var(--generalLight);
+  background-color: var(--adicional8);
 }
 
 button {

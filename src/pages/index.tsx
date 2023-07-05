@@ -4,6 +4,12 @@ import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
 import { Footer } from '@/components/Footer'
 import { AboutMusic } from '@/components/About'
+import { Singers } from '@/components/Singers'
+import { Pricing } from '@/components/Pricing'
+import { Sponsors } from '@/components/Sponsors'
+import { EventShedule } from '@/components/EventShedule'
+import { Testimonials } from '@/components/Testimonials'
+import { Gallery } from '@/components/Gallery'
 
 const montserrat = Montserrat({ variable: '--montserrat', subsets: ['latin'] })
 
@@ -20,6 +26,12 @@ export default function Home() {
       <main className={`${montserrat.variable} ${montserrat.className}`}>
         <Hero id="home" />
         <AboutMusic />
+        <Singers />
+        {/* <EventShedule /> */}
+        <Pricing />
+        <Sponsors />
+        <Testimonials />
+        <Gallery />
       </main>
       <Footer />
     </>

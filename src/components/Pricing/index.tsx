@@ -1,34 +1,58 @@
 import React from 'react'
 import styles from './styles.module.scss'
+import { SubTitle } from '../SubTitle'
+import { pricingCardData } from '@/components/Pricing/pricingCardData'
+import { Button } from '../Button'
 
-type HeaderProps = {}
+import { Raleway } from 'next/font/google'
+const raleway = Raleway({ subsets: ['latin'], weight: '400' })
 
-export const Header = ({}: HeaderProps) => {
+type PricingProps = {}
+
+export const Pricing = ({}: PricingProps) => {
   return (
-    <div className="pricing">
-      <div className="indicator"></div>
+    <section className={styles.container}>
+      <SubTitle>Escolha o tipo de ingresso</SubTitle>
 
-      <div className="content">
-        <div className="title">
-          <div className="basic">Basico</div>
+      <div className={styles.cards}>
+        {pricingCardData.map(
+          ({ name, price, themeColor, benefits, buttonConfigs }) => (
+            <div
+              className={`${styles.card}  ${styles[themeColor]}`}
+              key={`card-${name}`}
+            >
+              <div className={styles.content}>
+                <h3>{name}</h3>
+                <h1>{`R$:${price}`}</h1>
+              </div>
 
-          <div className="_100">R$100</div>
-        </div>
-
-        <div className="content2">
-          <div className="_1-seat-available">Acesso aos shows digitais</div>
-
-          <div className="access-to-wifi-router">
-            Experiência musical imersiva
-          </div>
-
-          <div className="free-food-coffee">Preço acessível</div>
-        </div>
-
-        <div className="buttons">
-          <div className="button">Saber mais</div>
-        </div>
+              <ul>
+                {benefits.map((text, index) => (
+                  <li
+                    className={raleway.className}
+                    key={`benefits-${index}-${text}`}
+                  >
+                    {text}
+                  </li>
+                ))}
+              </ul>
+              <Button
+                href={buttonConfigs.href}
+                noborder={buttonConfigs.noborder}
+                color={
+                  name === 'VIP'
+                    ? 'redOutline'
+                    : name === 'Basico'
+                    ? 'light'
+                    : 'dark'
+                }
+              >
+                {buttonConfigs.text}
+              </Button>
+            </div>
+          )
+        )}
       </div>
-    </div>
+    </section>
   )
 }

@@ -1,6 +1,6 @@
 import styles from './styles.module.scss'
 import Link from 'next/link'
-import { NavLinkData } from '@/utils/navLinkData'
+import { NavLinkData } from '@/components/NavLink/navLinkData'
 
 import { Montserrat } from 'next/font/google'
 import { Button } from '../Button'

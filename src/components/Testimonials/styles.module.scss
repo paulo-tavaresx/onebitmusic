@@ -1,3 +1,96 @@
 .container {
-  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 4.4375rem;
+
+  h2 {
+    text-align: center;
+  }
+
+  .testimonials {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, min(100%, 48.125rem));
+    justify-content: center;
+    gap: 1.875rem;
+    padding-bottom: 7.5rem;
+    overflow-x: hidden;
+
+    .testimonial {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      margin-top: 0.8rem;
+
+      max-width: min(100%, 48.125rem);
+
+      .containerText {
+        position: relative;
+        z-index: 1;
+        padding: 3.125em 3.75rem 3.875rem;
+        text-align: center;
+        height: 100%;
+
+        &.cursorPoint {
+          cursor: pointer;
+        }
+
+        &::before {
+          content: '';
+          background-color: var(--generalDark);
+          top: 0;
+          left: 0;
+          z-index: -1;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          opacity: 0.1;
+        }
+      }
+    }
+
+    & .testimonial:last-child {
+      order: -1;
+    }
+    & .testimonial:nth-child(2) {
+      margin-top: 0;
+    }
+
+    .postCarroselControl {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      bottom: 12.5rem;
+      z-index: 1;
+      padding: 1rem;
+      left: 0;
+      right: 0;
+      gap: 80.73%;
+      padding: 0 2rem;
+    }
+  }
+  .user {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .userText {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3125rem;
+    }
+  }
+
+  @media (min-width: 1050px) {
+    .testimonials {
+      .postCarroselControl {
+        display: none;
+      }
+    }
+  }
 }

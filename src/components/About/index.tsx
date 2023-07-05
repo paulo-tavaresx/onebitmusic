@@ -13,15 +13,17 @@ export const AboutMusic = ({}: AboutMusicProps) => {
       <Image src={Images} alt="show images" />
 
       <div className={styles.content}>
-        <SubTitle>Sobre a gente</SubTitle>
+        <div>
+          <SubTitle>Sobre a gente</SubTitle>
 
-        <Paragraph>
-          Na onebitmusic, estamos redefinindo a maneira como experimentamos e
-          nos envolvemos com a música, utilizando tecnologia de realidade
-          virtual (VR) para criar shows e performances que transcendem os
-          limites físicos e levam você a novos patamares de entretenimento
-          musical.
-        </Paragraph>
+          <Paragraph>
+            Na onebitmusic, estamos redefinindo a maneira como experimentamos e
+            nos envolvemos com a música, utilizando tecnologia de realidade
+            virtual (VR) para criar shows e performances que transcendem os
+            limites físicos e levam você a novos patamares de entretenimento
+            musical.
+          </Paragraph>
+        </div>
 
         <Button color="light" href="#" arrowIcon={true}>
           Ler mais

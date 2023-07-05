@@ -1,3 +1,86 @@
 .container {
-  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  background-image: linear-gradient(
+    180deg,
+    rgba(252, 82, 82, 0.05) 0%,
+    rgba(252, 82, 82, 0) 100%
+  );
+  padding: 10rem 0;
+  position: relative;
+
+  .iconinstagram {
+    position: absolute;
+    top: 2.25rem;
+    right: calc(50% + 2.25rem);
+    opacity: 0.1;
+  }
+
+  h2 {
+    padding: 0 var(--maxContainerWidth);
+  }
+  & figure:nth-child(2),
+  & figure:last-child {
+    filter: opacity(0.5);
+  }
+
+  .media {
+    display: flex;
+    justify-content: center;
+    gap: 1.875rem;
+    overflow-x: hidden;
+    position: relative;
+
+    .postCarroselControl {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      transform: translateY(-50%);
+      top: 10rem;
+      z-index: 1;
+      padding: 1rem;
+      left: 0;
+      right: 0;
+      gap: 80.73%;
+      padding: 0 2rem;
+    }
+
+    .instashot {
+      display: flex;
+      max-width: 20rem;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      img {
+        aspect-ratio: 1;
+      }
+
+      .titleTags {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .likesComments {
+          display: inline-flex;
+          gap: 2.5rem;
+        }
+
+        p {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 450px) {
+    .media {
+      .postCarroselControl {
+        top: 11.5625rem;
+      }
+      .instashot {
+        max-width: 23.125rem;
+      }
+    }
+  }
 }

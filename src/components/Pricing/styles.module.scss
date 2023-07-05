@@ -1,3 +1,78 @@
 .container {
-  background-color: white;
+  padding: 1rem var(--maxContainerWidth);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3.75rem;
+
+  .cards {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(15.625rem, 23.125rem));
+    gap: 0.9375rem;
+    justify-content: center;
+
+    .card {
+      position: relative;
+      background-color: var(--generalLight);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 1.125rem;
+      padding: 1.625rem max(calc((100% - 19.375rem) / 2), 1.875rem);
+      gap: 1.875rem;
+      overflow: hidden;
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.9375rem;
+
+        h3 {
+          font-size: 1.5rem;
+          font-weight: 800;
+          line-height: 38px;
+          text-align: center;
+          color: inherit;
+        }
+        h1 {
+          font-size: 3.75rem;
+          text-transform: capitalize;
+        }
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.9375rem;
+        li {
+          text-align: center;
+          font-size: 1rem;
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 0.25rem;
+      }
+
+      &.black {
+        color: var(--generalDark);
+        &::after {
+          background-color: var(--generalDark);
+        }
+      }
+
+      &.red {
+        color: var(--generalRed);
+        &::after {
+          background-color: var(--generalRed);
+        }
+        overflow: hidden;
+      }
+    }
+  }
 }
