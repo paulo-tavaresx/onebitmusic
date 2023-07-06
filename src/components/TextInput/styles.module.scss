@@ -1,3 +1,31 @@
 .container {
-  background-color: white;
+  display: flex;
+  flex-direction: column-reverse;
+
+  label,
+  input {
+    transition: all 0.3s ease-in-out;
+  }
+
+  input {
+    color: var(--generalLight);
+    background-color: transparent;
+    border: 0;
+    padding: 0.5rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--generalLight);
+    position: relative;
+
+    &:focus {
+      outline: 0;
+      border-color: var(--generalBlue);
+    }
+  }
+  input:focus + label {
+    color: var(--generalBlue);
+  }
+  label {
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
 }

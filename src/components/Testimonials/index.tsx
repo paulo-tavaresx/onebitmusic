@@ -47,8 +47,7 @@ export const Testimonials = ({}: TestimonialsProps) => {
             <div key={`testimonial-${index}`} className={styles.testimonial}>
               <div
                 className={`${styles.containerText} 
-                ${index === length - 1 && styles.cursorPoint} 
-                ${index === 1 && styles.cursorPoint}
+
                   `}
                 onClick={() => {
                   index === length - 1 && changeToPrevOption()

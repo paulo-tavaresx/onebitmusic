@@ -48,7 +48,7 @@ export const TwitterIcon = () => {
   )
 }
 
-export const LinkedinIcon = () => {
+export const LinkedInIcon = () => {
   return (
     <svg
       width="24"

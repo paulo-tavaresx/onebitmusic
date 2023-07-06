@@ -1,0 +1,152 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 10rem var(--maxContainerWidth) 6rem;
+
+  background-image: linear-gradient(
+    180deg,
+    rgba(56, 29, 219, 0.05) 0%,
+    rgba(56, 29, 219, 0) 100%
+  );
+  > h2 {
+    margin-bottom: 1.25rem;
+  }
+  .tabsDays {
+    display: grid;
+    grid-template-columns: repeat(3, min(1fr));
+    gap: 1.875rem;
+    justify-content: center;
+
+    .day {
+      color: var(--generalLight);
+      cursor: pointer;
+      position: relative;
+      padding-bottom: 1.25rem;
+
+      h3 {
+        font-size: 1.5rem;
+        opacity: 0.5;
+      }
+      time {
+        opacity: 0.2;
+        color: var(--generalDark);
+      }
+      h3,
+      time,
+      &::after {
+        transition: all 0.3s ease-in-out;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 0.25rem;
+        background-color: var(--generalDark);
+        opacity: 0.1;
+        top: 100%;
+        left: 0;
+      }
+
+      &.active {
+        color: var(--generalDark);
+
+        h3,
+        &::after,
+        time {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .schedule {
+    border-radius: 1.5rem;
+    border: 1px solid var(--generalLight);
+    overflow: auto;
+
+    header,
+    .list {
+      display: grid;
+      grid-template-columns: 14.375rem 23.125rem 24.9rem;
+      gap: 1.875rem;
+      padding: 2.5rem;
+    }
+    header {
+      position: relative;
+      z-index: 1;
+
+      &::before {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        background-color: var(--generalDark);
+        opacity: 0.05;
+      }
+    }
+    & .list + .list {
+      border-top: 1px solid var(--generalLight);
+    }
+
+    .list {
+      > p {
+        font-weight: 700;
+      }
+      .singersAndStatesShows {
+        display: flex;
+        justify-content: space-between;
+        gap: 2.5rem;
+
+        .singers {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+
+          .singer {
+            display: flex;
+            align-items: center;
+            gap: 0.625rem;
+
+            > div {
+              display: flex;
+              flex-direction: column;
+              justify-items: flex-start;
+              gap: 0.5rem;
+              p {
+                opacity: 0.5;
+              }
+              > * {
+                display: inline-flex;
+                gap: 0.25rem;
+                white-space: nowrap;
+              }
+            }
+          }
+        }
+
+        h5 {
+          display: inline-flex;
+          width: 100%;
+          align-items: center;
+          justify-content: flex-end;
+          white-space: nowrap;
+          gap: 0.5rem;
+          text-align: end;
+
+          img {
+            width: 1.5rem;
+
+            aspect-ratio: 1;
+          }
+          &.redColor {
+            color: var(--generalRed);
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}

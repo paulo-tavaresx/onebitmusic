@@ -1,6 +1,6 @@
 .container {
   background-image: url('/assets/herobg.png');
-  padding: 11.6875rem 0 0;
+
   min-height: 100vh;
   gap: 5.25rem;
   background-size: cover;
@@ -11,7 +11,7 @@
   justify-content: center;
 
   .content {
-    padding: 0 max(calc((100% - 60.625rem) / 2), 1rem);
+    padding: 11.6875rem max(calc((100% - 60.625rem) / 2), 1rem) 0;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -19,8 +19,8 @@
 
     h1 {
       display: flex;
-      text-transform: capitalize;
       flex-direction: column;
+      text-transform: capitalize;
       align-items: center;
       font-weight: 700;
       font-size: 3rem;
@@ -30,7 +30,7 @@
       }
     }
     p {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
       line-height: 2.375rem;
     }
 
@@ -49,8 +49,9 @@
         font-size: 1.25rem;
         line-height: 1.75rem;
         gap: 1.25rem;
+
         &:hover {
-          transition: all 0.3s ease-in-out;
+          transition: var(--animationSettings);
           transform: scale(1.1);
 
           filter: brightness(0.8);
@@ -69,16 +70,14 @@
     text-align: center;
     opacity: 0.5;
     font-size: 6rem;
-    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
 
   @media (min-width: 769px) {
-    div {
+    .content {
       h1 {
         font-size: 4.5rem;
-      }
-      p {
-        font-size: 1.5rem;
       }
     }
   }

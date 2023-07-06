@@ -1,12 +1,13 @@
 import Link from 'next/link'
 import styles from './styles.module.scss'
-import { ReactNode } from 'react'
+import { MouseEventHandler, ReactNode } from 'react'
 
 type ButtonProps = {
   href: string
   children: ReactNode
   arrowIcon?: boolean
   noborder?: boolean
+  onClick?: MouseEventHandler
   color?: 'dark' | 'light' | 'red' | 'redOutline'
 }
 
@@ -15,10 +16,12 @@ export const Button = ({
   children,
   color = 'dark',
   arrowIcon = false,
-  noborder = true
+  noborder = true,
+  onClick
 }: ButtonProps) => {
   return (
     <Link
+      onClick={onClick}
       href={href}
       className={`${styles.container}  
       ${color === 'light' && styles.lightColor} 

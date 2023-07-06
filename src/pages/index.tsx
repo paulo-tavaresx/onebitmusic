@@ -7,9 +7,10 @@ import { AboutMusic } from '@/components/About'
 import { Singers } from '@/components/Singers'
 import { Pricing } from '@/components/Pricing'
 import { Sponsors } from '@/components/Sponsors'
-import { EventShedule } from '@/components/EventShedule'
+import { EventSchedule } from '@/components/EventSchedule'
 import { Testimonials } from '@/components/Testimonials'
 import { Gallery } from '@/components/Gallery'
+import { ContactUs } from '@/components/ContactUs'
 
 const montserrat = Montserrat({ variable: '--montserrat', subsets: ['latin'] })
 
@@ -27,11 +28,12 @@ export default function Home() {
         <Hero id="home" />
         <AboutMusic />
         <Singers />
-        {/* <EventShedule /> */}
+        <EventSchedule />
         <Pricing />
         <Sponsors />
         <Testimonials />
         <Gallery />
+        <ContactUs />
       </main>
       <Footer />
     </>

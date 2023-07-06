@@ -1,8 +1,34 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import styles from './styles.module.scss'
 
-type HeaderProps = {}
+import { Raleway } from 'next/font/google'
+const raleway = Raleway({ subsets: ['latin'], weight: '400' })
 
-export const Header = ({}: HeaderProps) => {
-  return <header className={styles.container}>Header</header>
+type TextInputProps = {
+  label: string
+  type?: string
+  placeholder?: string
+  value: string
+  setValue: React.Dispatch<React.SetStateAction<string>>
+}
+
+export const TextInput = ({
+  label,
+  type,
+  placeholder,
+  value,
+  setValue
+}: TextInputProps) => {
+  return (
+    <span className={`${styles.container} ${raleway.className}`}>
+      <input
+        id={label}
+        type={type ?? 'text'}
+        value={value}
+        placeholder={placeholder ?? ''}
+        onChange={e => setValue(e.target.value)}
+      />
+      <label htmlFor={label}>{label}</label>
+    </span>
+  )
 }

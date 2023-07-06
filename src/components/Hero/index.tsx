@@ -1,17 +1,32 @@
-import React from 'react'
-import styles from './styles.module.scss'
+'use client'
 
+import React, { useState } from 'react'
+import styles from './styles.module.scss'
+import { useInterval } from '../../hooks/useInterval'
 import { Button } from '../Button'
 import Link from 'next/link'
 import Image from 'next/image'
 import IconVideoPlayer from '../../../public/assets/Play.svg'
 import { Paragraph } from '../Paragraph'
+import { calcDIferenceDate } from '@/utils/calcDIferenceDate'
 
 type HeroProps = {
   id: string
 }
 
 export const Hero = ({ id }: HeroProps) => {
+  const [eventData] = useState(new Date('2023-07-26'))
+  const [remainTime, setRemainTime] = useState({
+    dias: 0,
+    horas: 0,
+    minutos: 0,
+    segundos: 0
+  })
+  const handleChangeTime = () => {
+    setRemainTime(calcDIferenceDate(eventData))
+  }
+  useInterval(handleChangeTime, 1000)
+
   return (
     <section id={id} className={styles.container}>
       <div className={styles.content}>
@@ -37,7 +52,12 @@ export const Hero = ({ id }: HeroProps) => {
         </span>
       </div>
 
-      <time>5d 2h 26m 12s</time>
+      <time>
+        <span>{remainTime.dias}d</span>
+        <span>{remainTime.horas}h</span>
+        <span>{remainTime.minutos}m</span>
+        <span>{remainTime.segundos}s</span>
+      </time>
     </section>
   )
 }

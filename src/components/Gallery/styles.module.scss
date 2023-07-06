@@ -53,7 +53,7 @@
       gap: 1.5rem;
 
       img {
-        aspect-ratio: 1;
+        user-select: none;
       }
 
       .titleTags {
@@ -64,6 +64,7 @@
         .likesComments {
           display: inline-flex;
           gap: 2.5rem;
+          user-select: none;
         }
 
         p {

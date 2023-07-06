@@ -7,9 +7,9 @@ import { Raleway } from 'next/font/google'
 import {
   FacebookIcon,
   InstagramIcon,
-  LinkedinIcon,
+  LinkedInIcon,
   TwitterIcon
-} from '../mediasIcons'
+} from '../Icons'
 
 const raleway = Raleway({ subsets: ['latin'], weight: '400' })
 
@@ -17,7 +17,7 @@ type FooterProps = {}
 
 export const Footer = ({}: FooterProps) => {
   return (
-    <footer className={styles.container}>
+    <footer className={`${styles.container} `}>
       <Logo />
 
       <div>
@@ -33,8 +33,8 @@ export const Footer = ({}: FooterProps) => {
             </Link>
           </li>
           <li>
-            <Link href={'#'} aria-label="linkedin">
-              <LinkedinIcon />
+            <Link href={'#'} aria-label="linkedIn">
+              <LinkedInIcon />
             </Link>
           </li>
           <li>
