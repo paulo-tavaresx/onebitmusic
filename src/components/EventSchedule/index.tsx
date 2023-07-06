@@ -11,7 +11,7 @@ import Image from 'next/image'
 type EventScheduleProps = {}
 
 export const EventSchedule = ({}: EventScheduleProps) => {
-  const [tabIndex, useTabIndex] = useState(0)
+  const [tabIndex, setTabIndex] = useState(0)
   return (
     <section className={styles.container}>
       <SubTitle>Nossa programação</SubTitle>
@@ -22,7 +22,7 @@ export const EventSchedule = ({}: EventScheduleProps) => {
             key={`tab-Day-${index}`}
             className={`${styles.day} ${tabIndex === index && styles.active}`}
             onClick={() => {
-              tabIndex !== index && useTabIndex(index)
+              tabIndex !== index && setTabIndex(index)
             }}
           >
             <h3>{day}</h3>
