@@ -11,7 +11,7 @@ export const ContactUs = ({}: ContactUsProps) => {
   const [mensagem, setMensagem] = useState('')
 
   return (
-    <section className={styles.container}>
+    <section id="contactUs" className={styles.container}>
       <div className={styles.left}>
         <SubTitle>Nos contate</SubTitle>
 
@@ -70,7 +70,7 @@ export const ContactUs = ({}: ContactUsProps) => {
         <svg
           className={styles.effect}
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 224 232"
+          viewBox="0 0 220 232"
           fill="none"
         >
           <path
@@ -89,7 +89,7 @@ export const ContactUs = ({}: ContactUsProps) => {
         </svg>
       </div>
 
-      <form className={styles.form}>
+      <form onSubmit={e => e.preventDefault()} className={styles.form}>
         <h3>Preencha com seus dados</h3>
 
         <div className={styles.containerField}>
@@ -115,6 +115,26 @@ export const ContactUs = ({}: ContactUsProps) => {
 
         <button>Enviar</button>
       </form>
+
+      <svg
+        className={styles.shapeEffect}
+        xmlns="http://www.w3.org/2000/svg"
+        width="72"
+        height="48"
+        viewBox="0 0 72 48"
+        fill="none"
+      >
+        <path d="M24 48C24 21.4903 45.4903 0 72 0V48H24Z" fill="#F9F9F9" />
+        <path d="M0 0C26.5097 0 48 21.4903 48 48H0V0Z" fill="#464646" />
+        <g>
+          <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M24 47.9999H48C48 35.8265 43.4684 24.7116 36 16.25C28.5316 24.7116 24 35.8265 24 47.9999Z"
+            fill="#464646"
+          />
+        </g>
+      </svg>
     </section>
   )
 }

@@ -26,13 +26,14 @@
   }
 
   .media {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, min(100%, 23.125rem));
     justify-content: center;
     gap: 1.875rem;
     overflow-x: hidden;
     position: relative;
 
-    .postCarroselControl {
+    .postCarrosselControl {
       position: absolute;
       display: flex;
       justify-content: center;
@@ -47,12 +48,13 @@
     }
 
     .instashot {
+      padding: 0 1rem;
       display: flex;
-      max-width: 20rem;
       flex-direction: column;
       gap: 1.5rem;
 
       img {
+        aspect-ratio: 1;
         user-select: none;
       }
 
@@ -76,11 +78,11 @@
 
   @media (min-width: 450px) {
     .media {
-      .postCarroselControl {
+      .postCarrosselControl {
         top: 11.5625rem;
       }
       .instashot {
-        max-width: 23.125rem;
+        padding: 0;
       }
     }
   }

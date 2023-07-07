@@ -2,7 +2,6 @@
   padding: 2rem var(--maxContainerWidth);
   width: 100%;
   position: fixed;
-
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -17,8 +16,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      opacity: 0.8;
-      background-color: var(--generalDark);
+      background-color: var(--adicional7);
     }
   }
   .iconMobile {
@@ -26,8 +24,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    align-self: center;
 
-    height: 1.6rem;
+    height: 1.2rem;
     position: relative;
     cursor: pointer;
     transition: var(--animationSettings);
@@ -51,26 +50,26 @@
     }
     .line {
       background-color: var(--generalLight);
-      width: 3rem;
-      height: 0.5rem;
+      width: 2.5rem;
+      height: 0.3rem;
       border-radius: 0.3rem;
-      transition: 0.4s;
+      transition: var(--animationSettings);
 
       &::before,
       &::after {
         content: '';
         background-color: var(--generalLight);
-        width: 3rem;
-        height: 0.5rem;
-        border-radius: 0.3rem;
+        width: 2.5rem;
+        height: 0.3rem;
+        border-radius: inherit;
         position: absolute;
         transition: 0.4s;
       }
       &::before {
-        top: 105%;
+        top: 100%;
       }
       &::after {
-        bottom: 105%;
+        bottom: 100%;
       }
     }
   }

@@ -23,22 +23,38 @@ export const Footer = ({}: FooterProps) => {
       <div>
         <ul>
           <li>
-            <Link href={'#'} aria-label="facebook">
+            <Link
+              target="_blank"
+              href={'https://www.facebook.com/onebitcode'}
+              aria-label="facebook"
+            >
               <FacebookIcon />
             </Link>
           </li>
           <li>
-            <Link href={'#'} aria-label="twitter">
+            <Link
+              target="_blank"
+              href={'https://mobile.twitter.com/onebitcode'}
+              aria-label="twitter"
+            >
               <TwitterIcon />
             </Link>
           </li>
           <li>
-            <Link href={'#'} aria-label="linkedIn">
+            <Link
+              target="_blank"
+              href={'https://www.linkedin.com/in/paulo-tavaresx'}
+              aria-label="linkedIn"
+            >
               <LinkedInIcon />
             </Link>
           </li>
           <li>
-            <Link href={'#'} aria-label="instagram">
+            <Link
+              target="_blank"
+              href={'https://www.instagram.com/onebitcode'}
+              aria-label="instagram"
+            >
               <InstagramIcon />
             </Link>
           </li>

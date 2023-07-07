@@ -16,7 +16,7 @@
     }
   }
 
-  &.lightColor {
+  &.light {
     background-color: var(--generalLight);
     color: var(--generalDark);
     border-color: var(--generalDark);
@@ -27,7 +27,7 @@
       }
     }
   }
-  &.redColor {
+  &.red {
     background-color: var(--generalRed);
     color: var(--generalLight);
   }
@@ -49,6 +49,20 @@
   @media (min-width: 769px) {
     &:hover {
       transform: scale(1.1);
+
+      svg {
+        animation: 1s ease-in-out infinite ArrowMove;
+      }
+
+      @keyframes ArrowMove {
+        0%,
+        100% {
+          transform: translatex(0);
+        }
+        50% {
+          transform: translatex(10px);
+        }
+      }
     }
   }
 }

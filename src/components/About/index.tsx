@@ -9,7 +9,7 @@ type AboutMusicProps = {}
 
 export const AboutMusic = ({}: AboutMusicProps) => {
   return (
-    <section className={styles.container}>
+    <section id="about" className={styles.container}>
       <Image src={Images} alt="show images" />
 
       <div className={styles.content}>
@@ -25,7 +25,12 @@ export const AboutMusic = ({}: AboutMusicProps) => {
           </Paragraph>
         </div>
 
-        <Button color="light" href="#" arrowIcon={true}>
+        <Button
+          color="light"
+          href={'https://www.linkedin.com/in/paulo-tavaresx/'}
+          target={'_blank'}
+          arrowIcon={true}
+        >
           Ler mais
         </Button>
       </div>

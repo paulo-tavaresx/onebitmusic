@@ -7,13 +7,14 @@ import IconLive from '../../../public/assets/live.svg'
 import IconClock from '../../../public/assets/clock.svg'
 import { Paragraph } from '../Paragraph'
 import Image from 'next/image'
+import { PlayIcon } from '../Icons'
 
 type EventScheduleProps = {}
 
 export const EventSchedule = ({}: EventScheduleProps) => {
   const [tabIndex, setTabIndex] = useState(0)
   return (
-    <section className={styles.container}>
+    <section id={'eventSchedule'} className={styles.container}>
       <SubTitle>Nossa programação</SubTitle>
 
       <div className={styles.tabsDays}>
@@ -71,7 +72,7 @@ export const EventSchedule = ({}: EventScheduleProps) => {
                     {state === 'preview' && (
                       <>
                         <>Previa</>
-                        <Image src={IconVideoPlayer} alt="open video" />
+                        <PlayIcon />
                       </>
                     )}
                     {state === 'live' && (

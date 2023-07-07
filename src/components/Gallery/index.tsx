@@ -30,6 +30,18 @@ export const Gallery = ({}: GalleryProps) => {
       return [lastItem, ...restList]
     })
   }
+  const handleChangeLikeStatus = (PostId: number) => {
+    const indexLikedIcon = galleryDataList.findIndex(({ id }) => PostId === id)
+
+    if (indexLikedIcon < 0) return
+
+    setGalleryDataList(currentList => {
+      const PostsList = [...currentList]
+      const likedStatusPrev = PostsList[indexLikedIcon].liked
+      PostsList[indexLikedIcon].liked = !likedStatusPrev
+      return PostsList
+    })
+  }
 
   return (
     <section className={styles.container}>
@@ -50,7 +62,7 @@ export const Gallery = ({}: GalleryProps) => {
       <SubTitle>Galeria de Momentos Compartilhados</SubTitle>
 
       <div className={styles.media}>
-        <div className={styles.postCarroselControl}>
+        <div className={styles.postCarrosselControl}>
           <ArrowLeft
             onClick={changeToPrevOption}
             className={`${styles.arrowLeft}`}
@@ -62,13 +74,23 @@ export const Gallery = ({}: GalleryProps) => {
         </div>
 
         {galleryDataList.map(
-          ({ comments, likes, src, title, description }, index, array) => (
+          (
+            { comments, likes, liked, src, title, description, id },
+            index,
+            array
+          ) => (
             <figure key={`card-gallery-${index}`} className={styles.instashot}>
               <img src={src} />
 
               <div className={styles.titleTags}>
                 <div className={styles.likesComments}>
-                  <LikeDisplay isLike={true} currentCount={likes} />
+                  <LikeDisplay
+                    onClick={() => {
+                      handleChangeLikeStatus(id)
+                    }}
+                    isLike={liked}
+                    currentCount={likes}
+                  />
                   <CommentDisplay currentCount={comments} />
                 </div>
 

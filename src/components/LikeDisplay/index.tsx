@@ -8,18 +8,22 @@ import { useState } from 'react'
 type LikeDisplayProps = {
   currentCount: number
   isLike: boolean
+  onClick: () => void
 }
 
-export const LikeDisplay = ({ currentCount, isLike }: LikeDisplayProps) => {
-  const [isLiked, setIsLiked] = useState(isLike)
+export const LikeDisplay = ({
+  currentCount,
+  isLike,
+  onClick
+}: LikeDisplayProps) => {
   return (
     <span className={`${styles.container}`}>
       <Image
-        onClick={() => setIsLiked(!isLiked)}
-        src={isLiked ? LikeFill : LikeEmpty}
-        alt={isLiked ? 'like' : 'deslike'}
+        onClick={onClick}
+        src={isLike ? LikeFill : LikeEmpty}
+        alt={isLike ? 'like' : 'des like'}
       />
-      <span>{currentCount + (isLiked ? 1 : 0)}</span>
+      <span>{currentCount + (isLike ? 1 : 0)}</span>
     </span>
   )
 }

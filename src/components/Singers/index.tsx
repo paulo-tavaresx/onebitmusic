@@ -4,11 +4,17 @@ import { SubTitle } from '../SubTitle'
 import { Paragraph } from '../Paragraph'
 import { Button } from '../Button'
 
+import singers1 from '../../../public/assets/singers/img.png'
+import singers2 from '../../../public/assets/singers/img2.png'
+import singers3 from '../../../public/assets/singers/img3.png'
+import singers4 from '../../../public/assets/singers/img4.png'
+import Image from 'next/image'
+
 type SingersProps = {}
 
 export const Singers = ({}: SingersProps) => {
   return (
-    <section className={styles.container}>
+    <section id={'singers'} className={styles.container}>
       <div className={styles.content}>
         <div>
           <SubTitle>Artistas</SubTitle>
@@ -25,11 +31,34 @@ export const Singers = ({}: SingersProps) => {
           </Paragraph>
         </div>
 
-        <Button href={'#'} color="light" arrowIcon={true}>
+        <Button
+          href={'https://github.com/paulo-tavaresx/onebitmusic'}
+          target={'_blank'}
+          color="light"
+          arrowIcon={true}
+        >
           Veja a lista completa
         </Button>
       </div>
-      <div className={styles.images}></div>
+      <div className={styles.images}>
+        <div className={styles.imageContainer}>
+          <div className={styles.imageWrapper}>
+            <Image src={singers1} alt="singer1" />
+          </div>
+          <div className={styles.imageWrapper}>
+            <Image src={singers2} alt="singer2" />
+          </div>
+        </div>
+
+        <div className={styles.imageContainer}>
+          <div className={styles.imageWrapper}>
+            <Image src={singers3} alt="singer3" />
+          </div>
+          <div className={styles.imageWrapper}>
+            <Image src={singers4} alt="singer4" />
+          </div>
+        </div>
+      </div>
     </section>
   )
 }

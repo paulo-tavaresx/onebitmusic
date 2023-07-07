@@ -5,4 +5,5 @@ export type galleryDataType = {
   likes: number
   comments: number
   liked: boolean
+  id: number
 }

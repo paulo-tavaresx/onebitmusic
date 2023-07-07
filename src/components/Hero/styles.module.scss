@@ -1,6 +1,6 @@
 .container {
   background-image: url('/assets/herobg.png');
-
+  padding-top: 11.6875rem;
   min-height: 100vh;
   gap: 5.25rem;
   background-size: cover;
@@ -11,7 +11,7 @@
   justify-content: center;
 
   .content {
-    padding: 11.6875rem max(calc((100% - 60.625rem) / 2), 1rem) 0;
+    padding: 0 max(calc((100% - 60.625rem) / 2), 1rem);
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -70,8 +70,11 @@
     text-align: center;
     opacity: 0.5;
     font-size: 6rem;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    column-gap: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: center;
   }
 
   @media (min-width: 769px) {

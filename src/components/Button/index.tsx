@@ -7,6 +7,7 @@ type ButtonProps = {
   children: ReactNode
   arrowIcon?: boolean
   noborder?: boolean
+  target?: string
   onClick?: MouseEventHandler
   color?: 'dark' | 'light' | 'red' | 'redOutline'
 }
@@ -16,18 +17,18 @@ export const Button = ({
   children,
   color = 'dark',
   arrowIcon = false,
+  target,
   noborder = true,
   onClick
 }: ButtonProps) => {
   return (
     <Link
+      target={target}
       onClick={onClick}
       href={href}
       className={`${styles.container}  
-      ${color === 'light' && styles.lightColor} 
-      ${color === 'red' && styles.redColor} 
-      ${color === 'redOutline' && styles.redOutline}
-      ${noborder && styles.noborder}`}
+    ${styles[color]} 
+      ${noborder ? styles.noborder : ''}`}
     >
       {children}
       {arrowIcon && (

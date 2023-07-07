@@ -28,7 +28,11 @@ export const Sponsors = ({}: SponsorsProps) => {
         </div>
       </div>
 
-      <Button color="light" href="#">
+      <Button
+        color="light"
+        target="_blank"
+        href={'https://www.linkedin.com/in/paulo-tavaresx/'}
+      >
         Se torne um Investidor
       </Button>
     </section>

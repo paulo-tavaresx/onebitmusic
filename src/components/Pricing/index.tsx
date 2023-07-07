@@ -11,7 +11,7 @@ type PricingProps = {}
 
 export const Pricing = ({}: PricingProps) => {
   return (
-    <section className={styles.container}>
+    <section id="pricing" className={styles.container}>
       <SubTitle>Escolha o tipo de ingresso</SubTitle>
 
       <div className={styles.cards}>
@@ -37,12 +37,13 @@ export const Pricing = ({}: PricingProps) => {
                 ))}
               </ul>
               <Button
+                target={'_blank'}
                 href={buttonConfigs.href}
                 noborder={buttonConfigs.noborder}
                 color={
                   name === 'VIP'
                     ? 'redOutline'
-                    : name === 'Basico'
+                    : name === 'Básico'
                     ? 'light'
                     : 'dark'
                 }

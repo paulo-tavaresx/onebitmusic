@@ -41,11 +41,19 @@ export const Hero = ({ id }: HeroProps) => {
           para um mundo de criatividade e expressão.
         </Paragraph>
         <span>
-          <Button color="red" href={'#'}>
+          <Button
+            color="red"
+            target="_blank"
+            href={'https://www.linkedin.com/in/paulo-tavaresx/'}
+          >
             Começar
           </Button>
 
-          <Link className={styles.videoButton} href="#">
+          <Link
+            className={styles.videoButton}
+            target="_blank"
+            href="https://www.linkedin.com/in/paulo-tavaresx/"
+          >
             <Image src={IconVideoPlayer} alt="open video" />
             Assistir Video
           </Link>

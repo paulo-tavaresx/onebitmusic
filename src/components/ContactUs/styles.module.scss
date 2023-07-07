@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   column-gap: 8.125rem;
+  position: relative;
 
   .left {
     background-color: var(--generalDark);
@@ -20,6 +21,9 @@
       z-index: 1;
       right: 0;
       bottom: 0;
+      g {
+        mix-blend-mode: overlay;
+      }
     }
 
     .contactDetails {
@@ -65,8 +69,11 @@
       color: var(--generalLight);
       font-weight: 700;
       background-color: var(--generalRed);
-      transition: all 0.3s ease-in-out;
+      transition: var(--animationSettings);
     }
+  }
+  .shapeEffect {
+    display: none;
   }
 
   @media (min-width: 769px) {
@@ -78,7 +85,16 @@
       padding: 8.6875rem 0;
 
       button:hover {
-        transform: scale(1.3);
+        transform: scale(1.1);
+      }
+    }
+    .shapeEffect {
+      display: block;
+      position: absolute;
+      right: 3.5rem;
+      bottom: 0;
+      g {
+        mix-blend-mode: overlay;
       }
     }
   }

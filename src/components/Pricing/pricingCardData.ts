@@ -1,6 +1,6 @@
 export const pricingCardData = [
   {
-    name: 'Basico',
+    name: 'Básico',
     price: 100,
     themeColor: 'black',
     benefits: [
@@ -11,24 +11,24 @@ export const pricingCardData = [
     buttonConfigs: {
       noborder: false,
       color: 'light',
-      href: '#',
+      href: 'https://www.linkedin.com/in/paulo-tavaresx/',
       text: 'Saber mais'
     }
   },
 
   {
-    name: 'Padrao',
+    name: 'Padrão',
     price: 150,
     themeColor: 'black',
     benefits: [
       'Acessos aos shows digitais',
-      'Beneficios extras',
+      'Benefícios extras',
       'Possibilidade de interagir com os artistas'
     ],
     buttonConfigs: {
       noborder: true,
       color: 'dark',
-      href: '#',
+      href: 'https://www.linkedin.com/in/paulo-tavaresx/',
       text: 'Saber mais'
     }
   },
@@ -44,7 +44,7 @@ export const pricingCardData = [
     buttonConfigs: {
       noborder: false,
       color: 'redOutline',
-      href: '#',
+      href: 'https://www.linkedin.com/in/paulo-tavaresx/',
       text: 'Saber mais'
     }
   }
