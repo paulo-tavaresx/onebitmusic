@@ -22,7 +22,7 @@ export const Pricing = ({}: PricingProps) => {
               key={`card-${name}`}
             >
               <div className={styles.content}>
-                <h3>{name}</h3>
+                <h2>{name}</h2>
                 <h1>{`R$${price}`}</h1>
               </div>
 

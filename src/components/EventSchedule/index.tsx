@@ -60,7 +60,7 @@ export const EventSchedule = ({}: EventScheduleProps) => {
                           alt={`${name}-${index}`}
                         />
                         <div>
-                          <h4>{name}</h4>
+                          <h3>{name}</h3>
                           <p>
                             Both: <strong>{both}</strong>
                           </p>

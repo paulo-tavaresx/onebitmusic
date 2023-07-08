@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './styles.module.scss'
 import { Button } from '../Button'
 import { SubTitle } from '../SubTitle'
+import Image from 'next/image'
 
 type SponsorsProps = {}
 
@@ -12,19 +13,59 @@ export const Sponsors = ({}: SponsorsProps) => {
 
       <div className={styles.logos}>
         <div className={styles.row}>
-          <img src="assets/sponsors/img.png" />
-          <img src="assets/sponsors/img2.png" />
-          <img src="assets/sponsors/img3.png" />
-          <img src="assets/sponsors/img4.png" />
+          <Image
+            width={170}
+            height={56}
+            src="/assets/sponsors/img.png"
+            alt="google"
+          />
+          <Image
+            width={170}
+            height={38}
+            src="/assets/sponsors/img2.png"
+            alt="microsoft"
+          />
+          <Image
+            width={170}
+            height={54}
+            src="/assets/sponsors/img3.png"
+            alt="airbnb"
+          />
+          <Image
+            width={170}
+            height={50}
+            src="/assets/sponsors/img4.png"
+            alt="axure"
+          />
         </div>
         <div className={styles.row}>
-          <img src="assets/sponsors/img5.png" />
+          <Image
+            width={170}
+            height={59}
+            src="/assets/sponsors/img5.png"
+            alt="apple"
+          />
 
-          <img src="assets/sponsors/img6.png" />
+          <Image
+            width={170}
+            height={35}
+            src="/assets/sponsors/img6.png"
+            alt="facebook"
+          />
 
-          <img src="assets/sponsors/img7.png" />
+          <Image
+            width={170}
+            height={30}
+            src="/assets/sponsors/img7.png"
+            alt="nokia"
+          />
 
-          <img src="assets/sponsors/img8.png" />
+          <Image
+            width={170}
+            height={23}
+            src="/assets/sponsors/img8.png"
+            alt="oracle"
+          />
         </div>
       </div>
 
