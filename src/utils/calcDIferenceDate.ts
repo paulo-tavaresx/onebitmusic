@@ -10,12 +10,7 @@ export function calcDIferenceDate(EventEndData: Date) {
   let diference = dataFim.getTime() - currentDate.getTime()
 
   if (diference <= 0) {
-    return {
-      dias: 0,
-      horas: 0,
-      minutos: 0,
-      segundos: 0
-    }
+    return null
   }
 
   const dias = Math.floor(diference / umDia)

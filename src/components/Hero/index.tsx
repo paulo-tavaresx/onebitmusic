@@ -14,14 +14,16 @@ type HeroProps = {
   id: string
 }
 
+type timeType = {
+  dias: number
+  horas: number
+  minutos: number
+  segundos: number
+}
+
 export const Hero = ({ id }: HeroProps) => {
   const [eventData] = useState(new Date('2023-07-26'))
-  const [remainTime, setRemainTime] = useState({
-    dias: 0,
-    horas: 0,
-    minutos: 0,
-    segundos: 0
-  })
+  const [remainTime, setRemainTime] = useState<timeType | null>(null)
   const handleChangeTime = () => {
     setRemainTime(calcDIferenceDate(eventData))
   }
@@ -61,10 +63,14 @@ export const Hero = ({ id }: HeroProps) => {
       </div>
 
       <time>
-        <span>{remainTime.dias}d</span>
-        <span>{remainTime.horas}h</span>
-        <span>{remainTime.minutos}m</span>
-        <span>{remainTime.segundos}s</span>
+        {remainTime && (
+          <>
+            <span>{remainTime.dias}d</span>
+            <span>{remainTime.horas}h</span>
+            <span>{remainTime.minutos}m</span>
+            <span>{remainTime.segundos}s</span>
+          </>
+        )}
       </time>
     </section>
   )

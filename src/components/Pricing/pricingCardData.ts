@@ -26,7 +26,7 @@ export const pricingCardData = [
       'Possibilidade de interagir com os artistas'
     ],
     buttonConfigs: {
-      noborder: true,
+      noborder: false,
       color: 'dark',
       href: 'https://www.linkedin.com/in/paulo-tavaresx/',
       text: 'Saber mais'

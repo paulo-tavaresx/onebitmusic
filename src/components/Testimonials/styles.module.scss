@@ -47,14 +47,14 @@
         }
       }
     }
-    & .testimonial:first-child,
+    & .testimonial:nth-child(2),
     & .testimonial:last-child {
       .containerText {
         cursor: pointer;
       }
     }
 
-    & .testimonial:nth-child(2) {
+    & .testimonial:nth-child(3) {
       margin-top: 0;
     }
 

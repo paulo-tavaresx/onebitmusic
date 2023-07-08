@@ -54,7 +54,7 @@ export const Testimonials = ({}: TestimonialsProps) => {
                   `}
                   onClick={() => {
                     index === length - 1 && changeToPrevOption()
-                    index === 1 && changeToNextOption()
+                    index === 0 && changeToNextOption()
                   }}
                 >
                   <Paragraph quotes={true}>{text}</Paragraph>

@@ -30,7 +30,7 @@
       }
     }
     p {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       line-height: 2.375rem;
     }
 
@@ -41,7 +41,10 @@
       align-items: center;
       gap: 2.5rem;
 
-      .videoButton {
+      .videoButt p {
+        font-size: 1.25rem;
+      }
+      on {
         display: inline-flex;
         justify-content: center;
         align-items: center;
@@ -73,18 +76,29 @@
     column-gap: 3rem;
     display: flex;
     flex-wrap: wrap;
-    flex: 1;
     justify-content: center;
   }
+  @media (min-width: 1439px) {
+    .content {
+      h1 {
+        font-size: 3rem;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+    }
 
-  @media (min-width: 769px) {
+    time {
+      font-size: 4.5rem;
+    }
+  }
+  @media (min-width: 1600px) {
     .content {
       h1 {
         font-size: 4.5rem;
       }
     }
-  }
-  @media (min-width: 1400px) {
+
     time {
       font-size: 9rem;
     }
