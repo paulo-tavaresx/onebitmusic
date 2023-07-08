@@ -34,9 +34,6 @@
         text-align: center;
         height: 100%;
 
-        &.cursorPoint {
-        }
-
         &::before {
           content: '';
           background-color: var(--generalDark);
@@ -65,7 +62,7 @@
       margin-top: 0;
     }
 
-    .postCarroselControl {
+    .postCarrosselControl {
       position: absolute;
       display: flex;
       justify-content: center;
@@ -85,6 +82,13 @@
     flex-direction: column;
     gap: 1.5rem;
 
+    img {
+      max-width: 7.5rem;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
     .userText {
       display: flex;
       flex-direction: column;
@@ -94,7 +98,7 @@
 
   @media (min-width: 1050px) {
     .testimonials {
-      .postCarroselControl {
+      .postCarrosselControl {
         display: none;
       }
     }

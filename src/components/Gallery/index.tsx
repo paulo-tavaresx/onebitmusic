@@ -1,3 +1,5 @@
+'use client'
+
 import { galleryData } from '@/components/Gallery/galleryData'
 import { CommentDisplay } from '../CommentDisplay'
 import { LikeDisplay } from '../LikeDisplay'
@@ -6,41 +8,74 @@ import { SubTitle } from '../SubTitle'
 import styles from './styles.module.scss'
 
 import { Raleway } from 'next/font/google'
-import { useState } from 'react'
 import { ArrowLeft, ArrowRight } from '../Arrows'
 import { galleryDataType } from '@/types/galleryCardType'
+import { useEffect, useState } from 'react'
+import Image from 'next/image'
+
 const raleway = Raleway({ subsets: ['latin'], weight: '400' })
 
 type GalleryProps = {}
 
 export const Gallery = ({}: GalleryProps) => {
-  const [galleryDataList, setGalleryDataList] = useState(galleryData)
+  const [galleryDataList, setGalleryDataList] = useState<galleryDataType[]>()
+  const [postPerPage] = useState(5)
+
+  useEffect(() => {
+    const localDataStorage = window.localStorage.getItem('post-gallery-list')
+
+    const postSaved =
+      typeof localDataStorage === 'string' ? JSON.parse(localDataStorage) : null
+    const value = postSaved ? postSaved : galleryData
+
+    setGalleryDataList(value)
+  }, [])
+
+  useEffect(() => {
+    if (galleryDataList) {
+      localStorage.setItem('post-gallery-list', JSON.stringify(galleryDataList))
+    }
+  }, [galleryDataList])
 
   const changeToPrevOption = () => {
     setGalleryDataList(currentList => {
-      const [firstItem, ...rest] = currentList
-      return [...rest, firstItem]
+      if (currentList) {
+        const [firstItem, ...rest] = currentList
+
+        const newData = [...rest, firstItem]
+        return newData
+      }
     })
   }
 
   const changeToNextOption = () => {
     setGalleryDataList(currentList => {
-      const restList = [...currentList]
-      const lastItem = restList.pop() as galleryDataType
-      return [lastItem, ...restList]
+      if (currentList) {
+        const restList = [...currentList]
+        const lastItem = restList.pop() as galleryDataType
+
+        const NewList = [lastItem, ...restList]
+        return NewList
+      }
     })
   }
   const handleChangeLikeStatus = (PostId: number) => {
-    const indexLikedIcon = galleryDataList.findIndex(({ id }) => PostId === id)
+    if (galleryDataList) {
+      const indexLikedIcon = galleryDataList.findIndex(
+        ({ id }) => PostId === id
+      )
+      if (indexLikedIcon < 0) return
 
-    if (indexLikedIcon < 0) return
+      setGalleryDataList(currentList => {
+        if (currentList) {
+          const PostsList = [...currentList]
+          const likedStatusPrev = PostsList[indexLikedIcon].liked
+          PostsList[indexLikedIcon].liked = !likedStatusPrev
 
-    setGalleryDataList(currentList => {
-      const PostsList = [...currentList]
-      const likedStatusPrev = PostsList[indexLikedIcon].liked
-      PostsList[indexLikedIcon].liked = !likedStatusPrev
-      return PostsList
-    })
+          return PostsList
+        }
+      })
+    }
   }
 
   return (
@@ -73,33 +108,40 @@ export const Gallery = ({}: GalleryProps) => {
           />
         </div>
 
-        {galleryDataList.map(
-          (
-            { comments, likes, liked, src, title, description, id },
-            index,
-            array
-          ) => (
-            <figure key={`card-gallery-${index}`} className={styles.instashot}>
-              <img src={src} />
+        {galleryDataList &&
+          galleryDataList
+            .filter((_, index) => index < postPerPage)
+            .map(
+              (
+                { comments, likes, liked, src, title, description, id },
+                index
+              ) => (
+                <figure
+                  key={`card-gallery-${index}`}
+                  className={styles.instashot}
+                >
+                  <img src={`${src}`} alt={`${title}-${id}`} />
 
-              <div className={styles.titleTags}>
-                <div className={styles.likesComments}>
-                  <LikeDisplay
-                    onClick={() => {
-                      handleChangeLikeStatus(id)
-                    }}
-                    isLike={liked}
-                    currentCount={likes}
-                  />
-                  <CommentDisplay currentCount={comments} />
-                </div>
+                  <div className={styles.titleTags}>
+                    <div className={styles.likesComments}>
+                      <LikeDisplay
+                        onClick={() => {
+                          handleChangeLikeStatus(id)
+                        }}
+                        isLike={liked}
+                        currentCount={likes}
+                      />
+                      <CommentDisplay currentCount={comments} />
+                    </div>
 
-                <figcaption className={raleway.className}>{title}</figcaption>
-                <Paragraph>{description}</Paragraph>
-              </div>
-            </figure>
-          )
-        )}
+                    <figcaption className={raleway.className}>
+                      {title}
+                    </figcaption>
+                    <Paragraph>{description}</Paragraph>
+                  </div>
+                </figure>
+              )
+            )}
       </div>
     </section>
   )

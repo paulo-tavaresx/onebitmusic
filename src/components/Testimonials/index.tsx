@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './styles.module.scss'
 import { SubTitle } from '../SubTitle'
 import { Paragraph } from '../Paragraph'
 import { ArrowLeft, ArrowRight } from '../Arrows'
 import { testimonialsData } from './testimonialsData'
 import { testimonialDataType } from '@/types/testimonialDataType'
+import Image from 'next/image'
 
 type TestimonialsProps = {}
 
@@ -31,7 +32,7 @@ export const Testimonials = ({}: TestimonialsProps) => {
       <SubTitle>Relatos</SubTitle>
 
       <div className={styles.testimonials}>
-        <div className={styles.postCarroselControl}>
+        <div className={styles.postCarrosselControl}>
           <ArrowLeft
             onClick={changeToPrevOption}
             className={`${styles.arrowLeft}`}
@@ -42,32 +43,38 @@ export const Testimonials = ({}: TestimonialsProps) => {
           />
         </div>
 
-        {testimonialsDataList.map(
-          ({ text, avatarSrc, city, name }, index, { length }) => (
-            <div key={`testimonial-${index}`} className={styles.testimonial}>
-              <div
-                className={`${styles.containerText} 
+        {testimonialsDataList &&
+          testimonialsDataList
+            .filter((_, index) => index < 3)
+            .map(({ text, avatarSrc, city, name }, index, { length }) => (
+              <div key={`testimonial-${index}`} className={styles.testimonial}>
+                <div
+                  className={`${styles.containerText} 
 
                   `}
-                onClick={() => {
-                  index === length - 1 && changeToPrevOption()
-                  index === 1 && changeToNextOption()
-                }}
-              >
-                <Paragraph quotes={true}>{text}</Paragraph>
-              </div>
+                  onClick={() => {
+                    index === length - 1 && changeToPrevOption()
+                    index === 1 && changeToNextOption()
+                  }}
+                >
+                  <Paragraph quotes={true}>{text}</Paragraph>
+                </div>
 
-              <div className={styles.user}>
-                <img src={avatarSrc} />
+                <div className={styles.user}>
+                  <Image
+                    width={120}
+                    height={120}
+                    src={`${avatarSrc}`}
+                    alt={name}
+                  />
 
-                <div className={styles.userText}>
-                  <h3>{name}</h3>
-                  <Paragraph>{city}</Paragraph>
+                  <div className={styles.userText}>
+                    <h3>{name}</h3>
+                    <Paragraph>{city}</Paragraph>
+                  </div>
                 </div>
               </div>
-            </div>
-          )
-        )}
+            ))}
       </div>
     </section>
   )

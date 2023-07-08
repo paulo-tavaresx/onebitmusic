@@ -54,9 +54,10 @@ export const galleryData: galleryDataType[] = [
   },
   {
     src: 'assets/gallery/img1.jpg',
-    title: 'Experiência Sensorial',
+
+    title: 'Elevando a Vibração Musical',
     description:
-      'Uma foto que captura a intensidade da experiência sensorial nos shows da #OneBitMusic. Sinta a música pulsando através de seus sentidos e mergulhe nessa jornada sonora inesquecível.',
+      'Essa imagem representa o instante em que transcendemos para uma dimensão musical única durante o espetáculo imersivo da #OneBitMusic. Sentimos a vibração se elevar e as notas musicais ganharem vida, conectando-nos a uma experiência transcendental. Junte-se a nós nessa jornada !',
     likes: 568,
     comments: 42,
     liked: false,
