@@ -33,7 +33,6 @@
       font-size: 1.25rem;
       line-height: 2.375rem;
     }
-
     span {
       display: flex;
       flex-wrap: wrap;
@@ -41,10 +40,7 @@
       align-items: center;
       gap: 2.5rem;
 
-      .videoButt p {
-        font-size: 1.25rem;
-      }
-      on {
+      .videoButton {
         display: inline-flex;
         justify-content: center;
         align-items: center;
