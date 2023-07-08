@@ -2,7 +2,7 @@ import { galleryDataType } from '@/types/galleryCardType'
 
 export const galleryData: galleryDataType[] = [
   {
-    src: 'assets/gallery/img.png',
+    src: '/assets/gallery/img.png',
     title: 'Explorando Novos Horizontes Musicais',
     description:
       'Essa foto captura o momento em que mergulhamos na realidade virtual da #OneBitMusic. Foi uma experiência incrível explorar novos horizontes musicais e nos conectar com artistas de todo o mundo. Veja como nossos fãs estão aproveitando essa jornada musical!',
@@ -12,7 +12,7 @@ export const galleryData: galleryDataType[] = [
     id: 1
   },
   {
-    src: 'assets/gallery/img2.png',
+    src: '/assets/gallery/img2.png',
     title: 'Vibrações Eletrizantes na OneBitMusic',
     description:
       'Uma imagem que captura a energia contagiante do show digital da #OneBitMusic. Os visuais hipnotizantes e a batida pulsante nos transportaram para uma jornada musical incrível. Compartilhe suas fotos e faça parte da nossa galeria de fãs!',
@@ -22,7 +22,7 @@ export const galleryData: galleryDataType[] = [
     id: 2
   },
   {
-    src: 'assets/gallery/img3.png',
+    src: '/assets/gallery/img3.png',
     title: 'Noite Inesquecível com OneBitMusic',
     description:
       'Uma foto do incrível show de realidade virtual da #OneBitMusic, onde a música e a tecnologia se encontram para criar uma experiência única. Obrigado a todos que compartilharam esse momento conosco!',
@@ -32,7 +32,7 @@ export const galleryData: galleryDataType[] = [
     id: 3
   },
   {
-    src: 'assets/gallery/img4.png',
+    src: '/assets/gallery/img4.png',
     title: 'A Magia da Música em Realidade Virtual',
     description:
       'Essa foto é um lembrete da magia que encontramos nos shows digitais da #OneBitMusic. Os óculos de realidade virtual nos transportam para um mundo sonoro único, onde a música ganha vida. Veja como nossos fãs estão aproveitando essa experiência imersiva!',
@@ -43,7 +43,7 @@ export const galleryData: galleryDataType[] = [
   },
 
   {
-    src: 'assets/gallery/img5.png',
+    src: '/assets/gallery/img5.png',
     title: 'A Magia da Música em Realidade Virtual',
     description:
       'Essa foto é um lembrete da magia que encontramos nos shows digitais da #OneBitMusic. Os óculos de realidade virtual nos transportam para um mundo sonoro único, onde a música ganha vida. Veja como nossos fãs estão aproveitando essa experiência imersiva!',
@@ -53,7 +53,7 @@ export const galleryData: galleryDataType[] = [
     id: 5
   },
   {
-    src: 'assets/gallery/img1.jpg',
+    src: '/assets/gallery/img1.jpg',
 
     title: 'Elevando a Vibração Musical',
     description:
@@ -64,7 +64,7 @@ export const galleryData: galleryDataType[] = [
     id: 6
   },
   {
-    src: 'assets/gallery/img2.jpg',
+    src: '/assets/gallery/img2.jpg',
     title: 'Vibrações Musicais',
     description:
       'Essa foto representa as vibrações musicais que ecoam em cada show da #OneBitMusic. Deixe-se levar pelos ritmos contagiantes e compartilhe essa energia positiva conosco.',
@@ -74,7 +74,7 @@ export const galleryData: galleryDataType[] = [
     id: 7
   },
   {
-    src: 'assets/gallery/img3.jpg',
+    src: '/assets/gallery/img3.jpg',
     title: 'Conexões Musicais',
     description:
       'Nossos shows são um espaço para criar conexões musicais duradouras. Essa foto captura um momento especial em que os artistas e o público se unem para celebrar a música e a arte.',
@@ -84,7 +84,7 @@ export const galleryData: galleryDataType[] = [
     id: 8
   },
   {
-    src: 'assets/gallery/img4.jpg',
+    src: '/assets/gallery/img4.jpg',
     title: 'Imersão Sonora',
     description:
       'Uma foto que retrata a imersão sonora que você experimenta em nossos shows. Deixe-se envolver pelos sons envolventes e deixe que a música o transporte para um lugar mágico.',

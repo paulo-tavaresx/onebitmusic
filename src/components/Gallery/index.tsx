@@ -120,7 +120,12 @@ export const Gallery = ({}: GalleryProps) => {
                   key={`card-gallery-${index}`}
                   className={styles.instashot}
                 >
-                  <img src={`${src}`} alt={`${title}-${id}`} />
+                  <Image
+                    width={370}
+                    height={370}
+                    src={`${src}`}
+                    alt={`${title}-${id}`}
+                  />
 
                   <div className={styles.titleTags}>
                     <div className={styles.likesComments}>

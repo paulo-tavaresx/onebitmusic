@@ -37,23 +37,23 @@
       position: absolute;
       display: flex;
       justify-content: center;
+      top: 11.5625rem;
       transform: translateY(-50%);
       top: 10rem;
       z-index: 1;
-      padding: 1rem;
       left: 0;
       right: 0;
+      padding: 1rem;
       gap: 80.73%;
-      padding: 0 2rem;
     }
 
     .instashot {
-      padding: 0 1rem;
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
 
       img {
+        width: 100%;
         aspect-ratio: 1;
         user-select: none;
       }
@@ -78,13 +78,13 @@
     }
   }
 
-  @media (min-width: 450px) {
+  @media (max-width: 450px) {
     .media {
       .postCarrosselControl {
-        top: 11.5625rem;
+        padding: 0 2rem;
       }
       .instashot {
-        padding: 0;
+        padding: 0 1rem;
       }
     }
   }

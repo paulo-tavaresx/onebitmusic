@@ -23,7 +23,7 @@ export const Pricing = ({}: PricingProps) => {
             >
               <div className={styles.content}>
                 <h3>{name}</h3>
-                <h1>{`R$:${price}`}</h1>
+                <h1>{`R$${price}`}</h1>
               </div>
 
               <ul>

@@ -14,7 +14,7 @@ export const eventScheduleData = [
         {
           name: 'Yui Ronald',
           both: 'zF12',
-          avatarSrc: 'assets/eventSchedule/avatar.png'
+          avatarSrc: '/assets/eventSchedule/avatar.png'
         }
       ],
       state: 'preview'
@@ -27,17 +27,17 @@ export const eventScheduleData = [
         {
           name: 'Bob John',
           both: '3G12',
-          avatarSrc: 'assets/eventSchedule/avatar2.png'
+          avatarSrc: '/assets/eventSchedule/avatar2.png'
         },
         {
           name: 'Yui Ronald',
           both: 'zF12',
-          avatarSrc: 'assets/eventSchedule/avatar.png'
+          avatarSrc: '/assets/eventSchedule/avatar.png'
         },
         {
           name: 'Emma Satoshi',
           both: '2A35',
-          avatarSrc: 'assets/eventSchedule/avatar3.png'
+          avatarSrc: '/assets/eventSchedule/avatar3.png'
         }
       ],
       state: 'live'
@@ -50,12 +50,12 @@ export const eventScheduleData = [
         {
           name: 'Sasha Jackson',
           both: 'zF18',
-          avatarSrc: 'assets/eventSchedule/avatar4.png'
+          avatarSrc: '/assets/eventSchedule/avatar4.png'
         },
         {
           name: 'Diana Brock',
           both: '2F24',
-          avatarSrc: 'assets/eventSchedule/avatar5.png'
+          avatarSrc: '/assets/eventSchedule/avatar5.png'
         }
       ],
       state: 'come soon'
@@ -70,17 +70,17 @@ export const eventScheduleData = [
         {
           name: 'Lara Silva',
           both: '4B21',
-          avatarSrc: 'assets/eventSchedule/avatar1.jpg'
+          avatarSrc: '/assets/eventSchedule/lara.jpg'
         },
         {
           name: 'Miguel Oliveira',
           both: '1C30',
-          avatarSrc: 'assets/eventSchedule/avatar2.jpg'
+          avatarSrc: '/assets/eventSchedule/miguel.jpg'
         },
         {
           name: 'Sophia Costa',
           both: '5E43',
-          avatarSrc: 'assets/eventSchedule/avatar4.jpg'
+          avatarSrc: '/assets/eventSchedule/sophia.jpg'
         }
       ],
       state: 'come soon'
@@ -93,25 +93,25 @@ export const eventScheduleData = [
         {
           name: 'Carlos Hernandez',
           both: '6D15',
-          avatarSrc: 'assets/eventSchedule/avatar3.jpg'
+          avatarSrc: '/assets/eventSchedule/carlos.jpg'
         },
         {
           name: 'Isabella Ramirez',
           both: '3H22',
-          avatarSrc: 'assets/eventSchedule/avatar5.jpg'
+          avatarSrc: '/assets/eventSchedule/isabella.jpg'
         }
       ],
       state: 'come soon'
     },
     {
       content:
-        'Uma apresentação única do cantor e compositor "Lucas Torres", conhecido por suas letras profundas e melodias cativantes. Prepare-se para se emocionar com suas músicas que retratam experiências de vida e tocam os corações do público.',
-      data: '08:00 PM to 09:00 PM',
+        'Uma noite de música soul com o incrível cantor Lucas "O Porteiro". Deixe-se envolver pela voz marcante e pela interpretação única desse talentoso artista enquanto ele apresenta clássicos do soul e canções originais. Prepare-se para uma experiência musical emocionante!',
+      data: '08:00 PM to 10:00 PM',
       singers: [
         {
-          name: 'Lucas Torres',
-          both: '9J27',
-          avatarSrc: 'assets/eventSchedule/avatar1.jpg'
+          name: 'Lucas "O Porteiro"',
+          both: '7P30',
+          avatarSrc: '/assets/eventSchedule/lucastorres.jpg'
         }
       ],
       state: 'come soon'
@@ -126,7 +126,7 @@ export const eventScheduleData = [
         {
           name: 'Laura Santos',
           both: '7A45',
-          avatarSrc: 'assets/eventSchedule/avatar12.png'
+          avatarSrc: '/assets/eventSchedule/laura.jpg'
         }
       ],
       state: 'come soon'
@@ -139,12 +139,12 @@ export const eventScheduleData = [
         {
           name: 'Julia Mendes',
           both: '2D31',
-          avatarSrc: 'assets/eventSchedule/avatar13.png'
+          avatarSrc: '/assets/eventSchedule/julia.png'
         },
         {
           name: 'Pedro Silva',
           both: '8C19',
-          avatarSrc: 'assets/eventSchedule/avatar14.png'
+          avatarSrc: '/assets/eventSchedule/pedro.jpg'
         }
       ],
       state: 'come soon'
@@ -157,17 +157,17 @@ export const eventScheduleData = [
         {
           name: 'Gabriel Fernandes',
           both: '5H26',
-          avatarSrc: 'assets/eventSchedule/avatar15.png'
+          avatarSrc: '/assets/eventSchedule/gabriel.jpg'
         },
         {
           name: 'Camila Costa',
           both: '9G13',
-          avatarSrc: 'assets/eventSchedule/avatar16.png'
+          avatarSrc: '/assets/eventSchedule/camila.jpg'
         },
         {
           name: 'Lucas Santos',
           both: '6F36',
-          avatarSrc: 'assets/eventSchedule/avatar17.png'
+          avatarSrc: '/assets/eventSchedule/lucassantos.jpg'
         }
       ],
       state: 'come soon'

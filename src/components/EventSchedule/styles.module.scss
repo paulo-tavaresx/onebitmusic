@@ -61,6 +61,7 @@
     }
   }
   .schedule {
+    display: grid;
     border-radius: 1.5rem;
     border: 1px solid var(--generalLight);
     overflow: auto;

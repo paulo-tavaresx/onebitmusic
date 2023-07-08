@@ -2,6 +2,12 @@ import { testimonialDataType } from '@/types/testimonialDataType'
 
 export const testimonialsData: testimonialDataType[] = [
   {
+    text: 'A OneBitMusic não apenas me ofereceu uma plataforma para desfrutar de shows digitais envolventes, mas também me apresentou a artistas independentes incríveis. Através da plataforma, descobri músicos talentosos e me conectei com uma comunidade de amantes da música que compartilham interesses semelhantes. Estou impressionada com o compromisso da marca em valorizar a diversidade e a liberdade artística.',
+    name: 'Sofia',
+    city: 'Lisboa',
+    avatarSrc: '/assets/testimonials/avatar.png'
+  },
+  {
     text: 'Através dos shows digitais e da tecnologia de realidade virtual da OneBitMusic, pude mergulhar em um universo musical fascinante. Os visuais deslumbrantes, a qualidade do áudio e a interatividade oferecida pela plataforma me deixaram maravilhado. A OneBitMusic realmente entende como proporcionar experiências musicais únicas e memoráveis.',
     name: 'Carlos',
     city: 'Rio de Janeiro',
@@ -14,12 +20,11 @@ export const testimonialsData: testimonialDataType[] = [
     avatarSrc: '/assets/testimonials/avatar3.png'
   },
   {
-    text: 'Aprender lógica de programação sempre foi um desafio para mim. Mas, depois de experimentar a OneBitMusic, percebi que a música e a programação têm mais em comum do que eu imaginava! Assim como a lógica de programação, a harmonia e a melodia seguem padrões complexos que precisam ser compreendidos. Através dos shows digitais da OneBitMusic, fui transportado para um mundo de algoritmos musicais, onde cada nota era uma instrução e cada acorde uma estrutura de controle.',
+    text: 'Aprender lógica de programação sempre foi um desafio para mim. Mas, depois de experimentar a OneBitMusic, percebi que a música e a programação têm mais em comum do que eu imaginava! Assim como a lógica de programação, a harmonia e a melodia seguem padrões complexos que precisam ser compreendidos. Através dos shows digitais da OneBitMusic, fui transportado para um mundo de algoritmos musicais.',
     name: 'Lucas',
     city: 'Rio de Janeiro',
     avatarSrc: '/assets/testimonials/img2.jpeg'
   },
-
   {
     text: 'Fiquei encantada com a OneBitMusic desde o primeiro show digital que assisti. A realidade virtual me envolveu completamente, me fazendo sentir parte do palco e da música. Foi uma experiência emocionante que definitivamente vou repetir. Parabéns à OneBitMusic por revolucionar a forma como apreciamos a arte.',
     name: 'Laura',
@@ -32,12 +37,5 @@ export const testimonialsData: testimonialDataType[] = [
     name: 'Isabela',
     city: 'Florianópolis',
     avatarSrc: '/assets/testimonials/img3.jpg'
-  },
-
-  {
-    text: 'A OneBitMusic não apenas me ofereceu uma plataforma para desfrutar de shows digitais envolventes, mas também me apresentou a artistas independentes incríveis. Através da plataforma, descobri músicos talentosos e me conectei com uma comunidade de amantes da música que compartilham interesses semelhantes. Estou impressionada com o compromisso da marca em valorizar a diversidade e a liberdade artística.',
-    name: 'Sofia',
-    city: 'Lisboa',
-    avatarSrc: '/assets/testimonials/avatar.png'
   }
 ]

@@ -53,7 +53,12 @@ export const EventSchedule = ({}: EventScheduleProps) => {
                         key={`singers-${index}-${singerIndex}`}
                         className={styles.singer}
                       >
-                        <img src={`${avatarSrc}`} alt={`${name}-${index}`} />
+                        <Image
+                          width={56}
+                          height={56}
+                          src={`${avatarSrc}`}
+                          alt={`${name}-${index}`}
+                        />
                         <div>
                           <h4>{name}</h4>
                           <p>

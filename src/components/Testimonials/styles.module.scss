@@ -47,17 +47,13 @@
         }
       }
     }
-    & .testimonial:nth-child(3) {
-      .containerText {
-        cursor: pointer;
-      }
-    }
+    & .testimonial:first-child,
     & .testimonial:last-child {
-      order: -1;
       .containerText {
         cursor: pointer;
       }
     }
+
     & .testimonial:nth-child(2) {
       margin-top: 0;
     }

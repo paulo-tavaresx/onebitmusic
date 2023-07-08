@@ -1,18 +1,18 @@
 .container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   column-gap: 8.125rem;
   position: relative;
 
   .left {
-    background-color: var(--generalDark);
     display: flex;
     flex-direction: column;
     gap: 5rem;
+    flex: 1;
+    background-color: var(--generalDark);
     position: relative;
     max-width: 52.8125rem;
     padding: 3rem 1rem 5rem;
-    flex: 1;
 
     .effect {
       position: absolute;
@@ -39,9 +39,8 @@
   }
 
   .form {
-    max-width: 35.625rem;
-    flex: 1;
     padding: 3rem var(--maxContainerWidth);
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
@@ -76,14 +75,16 @@
     display: none;
   }
 
-  @media (min-width: 769px) {
+  @media (min-width: 850px) {
+    flex-direction: row;
     .left {
       gap: 8rem;
       padding: 7.5rem 0 17.875rem 5rem;
     }
     .form {
       padding: 8.6875rem 0;
-
+      margin-right: 2rem;
+      max-width: 35.625rem;
       button:hover {
         transform: scale(1.1);
       }
