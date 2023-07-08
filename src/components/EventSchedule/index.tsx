@@ -68,7 +68,7 @@ export const EventSchedule = ({}: EventScheduleProps) => {
                       </div>
                     ))}
                   </div>
-                  <h5 className={`${state === 'live' && styles.redColor}`}>
+                  <h4 className={`${state === 'live' ? styles.redColor : ''}`}>
                     {state === 'preview' && (
                       <>
                         <>Previa</>
@@ -87,7 +87,7 @@ export const EventSchedule = ({}: EventScheduleProps) => {
                         <Image src={IconClock} alt="clock" />
                       </>
                     )}
-                  </h5>
+                  </h4>
                 </div>
               </div>
             )

@@ -65,7 +65,6 @@ export const Header = ({}: HeaderProps) => {
       <div
         className={`${styles.iconMobile} ${isOpenMenu ? styles.MenuOpen : ''}`}
         onClick={() => setIsOpenMenu(prevState => !prevState)}
-        aria-label={`${isOpenMenu ? 'close menu' : 'open menu'}`}
       >
         <div className={styles.line}></div>
       </div>

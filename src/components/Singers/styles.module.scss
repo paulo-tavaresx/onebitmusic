@@ -50,13 +50,13 @@
       & .imageWrapper:first-child {
         align-self: flex-end;
         &::before {
-          background-image: url('/assets/singers/img.png');
+          background-image: url('/assets/singers/img.webp');
         }
       }
       & .imageWrapper:last-child {
         padding-bottom: 1.3125rem;
         &::before {
-          background-image: url('/assets/singers/img2.png');
+          background-image: url('/assets/singers/img2.webp');
         }
       }
     }
@@ -64,13 +64,13 @@
       & .imageWrapper:first-child {
         padding-top: 1.3125rem;
         &::before {
-          background-image: url('/assets/singers/img3.png');
+          background-image: url('/assets/singers/img3.webp');
         }
       }
       & .imageWrapper:last-child {
         align-self: flex-start;
         &::before {
-          background-image: url('/assets/singers/img4.png');
+          background-image: url('/assets/singers/img4.webp');
         }
       }
     }

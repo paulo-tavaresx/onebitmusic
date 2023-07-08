@@ -4,10 +4,10 @@ import { SubTitle } from '../SubTitle'
 import { Paragraph } from '../Paragraph'
 import { Button } from '../Button'
 
-import singers1 from '../../../public/assets/singers/img.png'
-import singers2 from '../../../public/assets/singers/img2.png'
-import singers3 from '../../../public/assets/singers/img3.png'
-import singers4 from '../../../public/assets/singers/img4.png'
+import singers1 from '../../../public/assets/singers/img.webp'
+import singers2 from '../../../public/assets/singers/img2.webp'
+import singers3 from '../../../public/assets/singers/img3.webp'
+import singers4 from '../../../public/assets/singers/img4.webp'
 import Image from 'next/image'
 
 type SingersProps = {}
